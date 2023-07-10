@@ -1,15 +1,11 @@
-if(process.argv.length < 2){
-    console.log("erreur");
+const inputNbr = process.argv[2];
+
+if(!inputNbr){
+    console.log("erreur d'argument");
     process.exit(1)
 }
 
-const nbr = process.argv;
-for(let i = 0; i < process.argv; i++){
-    console.log(nbr);
-}
+const regex = /^\d+$/;
+const onlyNbr = regex.test(inputNbr);
 
-if(isNaN !== process.argv){
-    console.log("false");
-} else {
-    console.log("true");
-}
+console.log(onlyNbr);
